@@ -3,9 +3,12 @@ import telebot
 from telebot import types
 from googletrans import Translator
 
+with open('token.bot', 'r') as file:
+    BOT_TOKEN = file.read()
+
 
 translator = Translator()
-bot = telebot.TeleBot('1762747577:AAHW0AScDUow6lXyKD8zyi6P7vZaitUMEaQ')
+bot = telebot.TeleBot(BOT_TOKEN)
 
 
 @bot.inline_handler(lambda query: len(query.query) > 0)
