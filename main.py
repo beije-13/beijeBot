@@ -30,13 +30,12 @@ def start_command(message):
 
 @bot.message_handler(commands=['help'])
 def help_command(message):
-    bot.send_message(message.from_user.id, 'I\'m inline bot!!! For translating text you need: \n-@ me in any chat you need\n-Write any text\n-Press the pop-up result to send translation to this chat.')
-    bot.send_message(message.from_user.id, 'ATTENTION!!! I\'m translating text via Google Translate.')
+    bot.send_message(message.from_user.id, 'I\'m inline bot. For translating text you need: \n-@ me in any chat you need\n-Write any text\n-Press the pop-up result to send translation to this chat.')
 
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
-    bot.send_message(message.from_user.id, 'Type /help to get how2use info :)')
+    bot.send_message(message.from_user.id, 'Type /help to get a quick guide :)')
 
 
 bot.polling(none_stop=True)
